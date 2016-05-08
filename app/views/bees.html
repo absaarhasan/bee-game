@@ -1,0 +1,15 @@
+<section class="bees">
+
+    <table>
+        <tr>
+            <th>Bee</th><th>Energy Level</th>
+        </tr>
+        <tr ng-repeat="bee in vm.bees.data" ng-class="{dead: bee.status == 'dead', active : bee.id == vm.targetBee.data}">
+            <td ng-bind="bee.name"></td>
+            <td ng-bind="bee.energy"></td>
+        </tr>
+    </table>
+
+    <button ng-click="vm.killbee()">Kill Bee!</button>
+
+</section>
